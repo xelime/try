@@ -1,0 +1,69 @@
+{% if include.header_id == 'header7' %}
+
+{% assign header_id = include.header_id %}
+
+{% elsif site.hero == 'product_background_image' %}
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == 'product_fixed_image' %}
+
+{% assign header_id = "header7" %}
+
+{% elsif site.hero == 'product' %}
+
+{% assign header_id = "header" %}
+
+{% elsif site.hero == 'product_slider' %}
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == 'product_video' %}
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == 'saas_video' %}
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == 'sass_background_image' %}
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == 'sass_fixed_image' %}
+
+{% assign header_id = "header2" %} 
+
+{% elsif site.hero == 'sass_slider' %}
+
+
+{% assign header_id = "header2" %}
+
+{% elsif site.hero == "sass" %}
+
+{% assign header_id = "header" %}
+
+{% else %}
+
+{% assign header_id = "header" %}
+
+{% endif %}
+
+    <!-- start Header Area -->
+    <header id="{{ header_id }}" >
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-between">
+                <div id="logo">
+                    <a href="{{ '/' | relative_url }}">
+                        <img class="logo-1" src="{{ 'img/logo.png' | relative_url }}" alt="" title="" />
+                    </a>
+                    <a href="{{ '/' | relative_url }}">
+                        <img class="logo-2" src="{{ 'img/logo.png' | relative_url }}" alt="" title="" />
+                    </a>
+                </div>
+            {% include nav-menu.html %}
+            </div>
+        </div>
+    </header>
+    <!-- End Header Area -->
+
